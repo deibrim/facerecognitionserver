@@ -26,7 +26,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.get('/', (req, res) => {
-  res.status(200).json("We are live");
+  res.send("We are live");
 });
 app.post('/signin', signin.handleSignin(db, bcrypt));
 
